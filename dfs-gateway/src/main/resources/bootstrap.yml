@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: dfs-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 116.62.134.49:8848
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:8001"
+            allowCredentials: true
+            allowedMethods:
+              - GET
+              - OPTIONS
+              - POST
+              - PUT
+              - DELETE
+              - HEAD
+            allowedHeaders: "*"
